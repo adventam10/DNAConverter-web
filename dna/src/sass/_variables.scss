@@ -1,0 +1,39 @@
+/// 余白
+$space_s: 8px;
+$space_m: 16px;
+$space_l: 24px;
+$space_xl: 32px;
+
+/*====================
+{{スマホを基本設計にする}}
+ - 〜479px：SP縦
+ - 480px〜599px：SP横
+ - 600px〜959px：タブレット
+ - 960px〜1279px：小型PC
+ - 1280px〜：大型PC
+====================*/
+$breakpoints: (
+  'sm': 'screen and (max-width: 320px)',
+  'tab': 'screen and (max-width: 599px)',
+  'pc': 'screen and (max-width: 959px)',
+) !default;
+
+$color-mode: (
+  'light': '(prefers-color-scheme: light)',
+  'dark': '(prefers-color-scheme: dark)',
+) !default;
+
+// ==============================
+// mixin
+// ==============================
+@mixin mq($breakpoint: sm) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin color($mode: dark) {
+  @media #{map-get($color-mode, $mode)} {
+    @content;
+  }
+}

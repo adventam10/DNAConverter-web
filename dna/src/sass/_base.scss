@@ -1,0 +1,22 @@
+@import "variables";
+@import "reset";
+
+button, input, select, textarea {
+  font-family : inherit;
+  font-size : 100%;
+}
+
+.button {
+  cursor: pointer;
+}
+
+.header-footer {
+  background-color: #333;
+  color: #f6f5f5;
+  padding: $space_m;
+  a:active,
+  a:focus,
+  a:visited {
+    color: #656565;
+  }
+}

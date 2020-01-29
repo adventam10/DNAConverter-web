@@ -8,7 +8,6 @@
     <title><?php echo $siteTitle; ?></title>
     <link rel="icon" href="img/favicon/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-    <link href="css/common.css" rel="stylesheet">
     <script>
     window.onload = function() {
         console.log("%c ", 'background: url(http://adventam10.php.xdomain.jp/dna/img/pig.png); background-size: 100% 100%; padding: 128px 200px');
