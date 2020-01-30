@@ -9,14 +9,6 @@
   margin-bottom: $space_s;
   margin-right: $space_s;
   margin-top: $space_s;
-  input {
-    cursor: pointer;
-    height: 20px;
-  }
-  label {
-    cursor: pointer;
-    margin-right: $space_s;
-  }
 }
 .form-convert {
   display: inline;
@@ -51,22 +43,32 @@
   margin-top: $space_s;
   padding: 0;
   img {
-    width: 40px;
+    width: $button-height;
   }
 }
 .button-convert {
-  background-color: #EF8303;
+  background-color: $color-light_accent;
+  @include color() {
+    background-color: $color-dark_accent;
+  }
   border-style: none;
   border-radius: 5px;
-  color: #f6f5f5;
+  color: $color-text_white;
   font-size: 14px;
-  height: 40px;
+  height: $button-height;
   margin-top: $space_s;
   padding: $space_s $space_m;
 }
 .store-badge-area{
   margin-bottom: $space_xl;
-  margin-left: calc(#{$space_m} - 8px);
-  margin-right: calc(#{$space_m} - 8px);
+  margin-left: calc(#{$space_m} - $apple-badge-margin);
+  margin-right: calc(#{$space_m} - $apple-badge-margin);
   vertical-align: middle;
+  .apple-badge {
+    display: inline-block;
+    overflow: hidden;
+    height: 40px;
+    margin: $apple-badge-margin;
+    background-size: contain;
+  }
 }
