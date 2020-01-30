@@ -61,8 +61,8 @@
 }
 .store-badge-area{
   margin-bottom: $space_xl;
-  margin-left: calc(#{$space_m} - $apple-badge-margin);
-  margin-right: calc(#{$space_m} - $apple-badge-margin);
+  margin-left: calc(#{$space_m - $apple-badge-margin});
+  margin-right: calc(#{$space_m - $apple-badge-margin});
   vertical-align: middle;
   .apple-badge {
     display: inline-block;
