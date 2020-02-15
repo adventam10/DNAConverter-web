@@ -1,0 +1,19 @@
+FORMAT: 1A
+HOST: http://adventam10.php.xdomain.jp/dna/api
+
+# DNA変換のAPIドキュメント
+
+## DNA変換 [/dna-converter.php]
+
+### DNA変換[POST]
+DNA変換した値を返します。
+
++ Request (application/json)
+    + Attributes
+        + mode: 0 (number, required) - モード（0: DNAに変換、1: 文字列に変換）
+        + text: あいうえお (string, required) - 変換対象文字列
+
++ Response 200 (application/json)
+    + Attributes
+        + resultCode: 0 (number, required) - 処理結果（0: 成功、1: モードが空、2: モードが不正、3: テキストが空、4: テキストが不正）
+        + convertedText: GCAGCAATCAACGCAGCAATCATAGCAGCAATCATCGCAGCAATCACAGCAGCAATCACC (string, optional) - 変換後文字列
